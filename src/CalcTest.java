@@ -44,6 +44,10 @@ public class CalcTest {
                 letters[i] = letters[i].replace("\"", "");
             }
 
+            if(letters[0].length() > 10) {
+                throw new RuntimeException("Первый аргумент не должен быть длиннее 10 символов");
+            }
+
 
         CalculateText lt = new CalculateText(letters[0], letters[1], operand);
         lt.firstValue = letters[0];
@@ -53,5 +57,3 @@ public class CalcTest {
         }
 
     }
-
-
