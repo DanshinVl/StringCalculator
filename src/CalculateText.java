@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class CalculateText {
     String firstValue;
     String secondValue;
@@ -47,9 +45,7 @@ public class CalculateText {
             String res = firstValue.substring(0,x);
             return res;
         }
-
-            return result;
+        return result;
     }
 
     }
-
