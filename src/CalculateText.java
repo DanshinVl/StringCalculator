@@ -1,3 +1,4 @@
+
 public class CalculateText {
     String firstValue;
     String secondValue;
@@ -27,15 +28,15 @@ public class CalculateText {
                 result += firstValue;
             }
             } else if(action == '-') {
-            result = "";
+            String resul;
                 int index = firstValue.indexOf(secondValue);
                 if(index == -1) {
                     return firstValue;
                 } else {
                     String res = firstValue.substring(0, index);
                     res += firstValue.substring(index + secondValue.length());
-                    res = result;
-                    return result;
+                    resul = res;
+                    return resul;
                 }
             } else {
             int x = firstValue.length()/Integer.parseInt(secondValue);
@@ -45,7 +46,12 @@ public class CalculateText {
             String res = firstValue.substring(0,x);
             return res;
         }
-        return result;
+        if (result.length() > 40) {
+            return result.substring(0,40) + "...";
+        } else {
+            return result;
+        }
     }
+
 
     }
